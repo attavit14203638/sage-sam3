@@ -1,0 +1,40 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+.python-version
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- IDE ----
+.vscode/
+.idea/
+.cursor/
+.windsurf/
+*.swp
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# ---- Project: no weights, no data, no run outputs, no vendored SAM3 source ----
+Codebase/runtime/
+Codebase/experiments/
+Codebase/Support/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.bin

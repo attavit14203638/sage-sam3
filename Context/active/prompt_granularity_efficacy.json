@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "arm": "prompt_granularity",
+  "status": "approved",
+  "approved_by": "user",
+  "approved_utc": "2026-09-13T19:25:47Z",
+  "single_seed_interpretation": "descriptive_unless_replicated",
+  "a0_eval_sha256": "16dd053a4090a9dd34b209b63a8dd396819d0c600462a4d39fca99fdbde63635",
+  "a0_annotation_sha256": "1e9cf5120bf3be17a61ccf800e48fe86b8581b7223cb20888bdfb89fed8d8f4b",
+  "criteria": [
+    {
+      "role": "primary_effect",
+      "metric": "Mask AP",
+      "minimum_delta": 0.01
+    },
+    {
+      "role": "non_regression",
+      "metric": "Bnd AP instance",
+      "minimum_delta": -0.003
+    },
+    {
+      "role": "non_regression",
+      "metric": "Mask AP_small",
+      "minimum_delta": -0.003
+    }
+  ]
+}

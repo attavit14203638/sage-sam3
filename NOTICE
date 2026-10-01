@@ -1,0 +1,26 @@
+Third-party notices
+
+The original code in this repository is released under the MIT License (see LICENSE). The
+components below keep their own licences. None of them is redistributed here, except for the
+licence text noted under SAM3.
+
+SAM3 (Meta Platforms, Inc.)
+  Licensed under the SAM License. The SAM3 source and weights are obtained separately and are
+  not included (Codebase/Support is not part of this repository).
+  Several modules subclass, patch, or reimplement parts of SAM3: Codebase/Core/eval_overrides.py,
+  augmentation.py, progress_trainer.py, project_torch_dataset.py, and
+  prompt_granularity_training.py. Portions that adapt SAM3 code remain subject to the SAM
+  License, and a copy of it is provided in third_party/SAM_LICENSE.txt.
+  The SAM License requires research that uses SAM3 to acknowledge that use when it is published
+  (section 1.b.ii).
+
+Detectron2 (Meta Platforms, Inc.)
+  Used only for the Mask R-CNN reference. Installed separately (see README.md).
+
+Boundary IoU (Cheng et al., 2021)
+  The reference implementation is installed separately. Codebase/Core/boundary_band.py
+  implements the instance-relative band parameterisation used in this study.
+
+OAM-TCD dataset and the released Mask R-CNN reference weights (Restor Foundation)
+  Obtained from their original providers on Hugging Face and governed by their dataset and model
+  cards (the dataset card lists CC BY 4.0). Neither is redistributed here.

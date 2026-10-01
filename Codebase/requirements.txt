@@ -1,0 +1,34 @@
+--extra-index-url https://download.pytorch.org/whl/cu126
+
+# Core GPU stack for HPC CUDA 12.6 environments.
+torch==2.7.0
+torchvision==0.22.0
+setuptools>=68,<82
+einops>=0.7.0
+
+# Install the bundled SAM3 source with training dependencies.
+-e ./Support/sam3[train]
+
+# Phase 0 data, notebook, and visualisation dependencies.
+datasets>=3.0.0
+scipy>=1.11.0
+pillow>=10.0.0
+matplotlib>=3.8.0
+notebook>=7.0.0
+ipykernel>=6.29.0
+huggingface_hub>=0.24.0
+
+# Needed for COCO-format conversion/evaluation and later Gate E / training work.
+pycocotools>=2.0.7
+opencv-python-headless>=4.9.0
+pandas>=2.0.0
+scikit-image>=0.22.0
+scikit-learn>=1.3.0
+
+# Detectron2 (Mask R-CNN baseline) dependencies.
+detectron2 @ git+https://github.com/facebookresearch/detectron2.git@v0.6
+shapely>=2.0.0
+
+# Useful for SAM3 configs/logging/runtime utilities.
+tensorboard>=2.15.0
+tqdm>=4.66.0
