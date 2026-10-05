@@ -29,7 +29,7 @@ Codebase/
   runtime/     generated at runtime: data exports, checkpoints, inference outputs
   experiments/ generated at runtime: per-run configs, logs, checkpoints
 Context/
-  active/      pre-registered efficacy declaration used by the experiment notebook
+  active/      internal efficacy-screen record checked by the experiment notebook
 LICENSE        MIT licence for the original code
 NOTICE         third-party notices
 third_party/   licence text that accompanies adapted SAM3 portions
@@ -63,7 +63,7 @@ huggingface-cli login                  # for the OAM-TCD dataset and SAM3 checkp
 2. **Train.** Use `Notebook/experiment_pipeline.ipynb`. The `ARM` switch selects the
    configuration: `ARM = None` reproduces Unified-Prompt SAM3 (internal A0); `ARM = "prompt_granularity"` trains the
    granularity-aware configuration. Training is notebook-driven and guarded: launches
-   require fresh headroom, contract, and (for the granularity arm) smoke and efficacy checks.
+   require fresh headroom, contract, and (for the granularity arm) smoke and internal efficacy-screen checks.
 
 3. **Infer and evaluate.** The same notebook runs locked tiled inference (1024/256 tiling,
    mask-NMS) and the evaluation in PROTOCOL.md, then prints the comparison table against the

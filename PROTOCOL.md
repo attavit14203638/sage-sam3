@@ -88,10 +88,11 @@ IoU, cgF1, and best-F1 threshold sweeps do not implement the crowd-ignore report
 and are diagnostics only. AP is reported from the locked score-range predictions, not from a
 test-selected operating threshold.
 
-## 6. Efficacy criteria for the granularity-aware arm
+## 6. Internal efficacy screen for the granularity-aware arm
 
-Declared before training and bound to the frozen Unified-Prompt SAM3 evaluation
-(`Context/active/prompt_granularity_efficacy.json`):
+Fixed before training as an internal screen for selecting the project contribution, bound to the
+frozen Unified-Prompt SAM3 evaluation (`Context/active/prompt_granularity_efficacy.json`), and not
+reported in the manuscript:
 
 - Primary effect: Mask AP delta ≥ +0.010.
 - Non-regression: instance Boundary AP delta ≥ −0.003 and Mask AP_small delta ≥ −0.003.

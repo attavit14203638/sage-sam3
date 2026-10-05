@@ -39,11 +39,13 @@ individual-tree evaluations for Unified-Prompt SAM3 and the Mask R-CNN reference
 was fixed before the final model comparison; exact preliminary calibration estimates are not
 reported because that sweep combined different reporting populations.
 
-## Pre-registered efficacy verdict (granularity-aware arm)
+## Internal efficacy screen (granularity-aware arm)
 
-The decision rule was declared and hash-bound to the frozen Unified-Prompt SAM3 evaluation before the arm was
-trained (`Context/active/prompt_granularity_efficacy.json`, SHA-256
-`4e649c7060b514171f7407d631b7d0c5f7176c6ee5eb91d60db6073a62d65974`):
+Before training the arm, we fixed an internal screening rule to decide whether it would become a
+project contribution and bound it by hash to the frozen Unified-Prompt SAM3 evaluation
+(`Context/active/prompt_granularity_efficacy.json`, SHA-256
+`4e649c7060b514171f7407d631b7d0c5f7176c6ee5eb91d60db6073a62d65974`). The screen is internal
+assessment and is not reported in the manuscript:
 
 | criterion | role | threshold | observed Δ | verdict |
 |---|---|---:|---:|---|

@@ -33,7 +33,7 @@ place.
 | `augmentation.py` | Training augmentation and verification |
 | `training_pipeline.py` | Training entry point and generated SAM3 configuration |
 | `progress_trainer.py` | Progress reporting, finite-value guards, and checkpoint views |
-| `prompt_granularity.py` | Category views, recipe contracts, efficacy checks, and run manifests |
+| `prompt_granularity.py` | Category views, recipe contracts, internal efficacy-screen checks, and run manifests |
 | `prompt_granularity_training.py` | Checked prompt collator, loss normalisation, and distributed smoke test |
 | `inference_engine.py` | Backend-neutral inference interface |
 | `tiled_inference.py` | Sliding-window inference and cross-tile mask non-maximum suppression |
@@ -69,8 +69,8 @@ have applied whenever CUDA is available.
 ## Runs
 
 All constants live in `Core/config.py`. Registering an arm does not activate it. A
-prompt-granularity launch additionally requires a passing smoke report, the approved efficacy
-declaration, exact recipe agreement, supported hardware, and an explicit launch decision. Every
+prompt-granularity launch additionally requires a passing smoke report, the approved internal
+efficacy-screen record, exact recipe agreement, supported hardware, and an explicit launch decision. Every
 run writes a generated configuration and provenance record under its own experiment directory.
 
 The committed notebooks are inert. They do not launch training, overwrite predictions, or
